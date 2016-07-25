@@ -2,11 +2,61 @@ body {
     margin: 0em;
 }
 
-nav {
+/*changing media query for the nav bar since it collapses too early for the # of items that i have listed on it*/
+
+@media (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+.navbar.navbar-default {
     background-color: #acd373;
     height: 4.75em;
     margin: 0em;
     padding: 0em;
+}
+
+.navbar-brand {    
+    height: auto;
+    width: auto;
+    max-height: 3.125em;
+}
+
+#navbar {
+    background: #acd373;
 }
 
 ul  {
@@ -16,41 +66,48 @@ ul  {
     text-transform: uppercase;
     font-weight: bold;
     color: #ffffff;
-    float: right;
-    margin-right: 15.5em;
     margin-top: 2em;
     font-size: .8em;
 }
 
-nav img {
-    padding: .5em;
-    display: inline;
-    float: left;
-    margin-left: 12.5em;
-    margin-top: 0.938em;
-    height: auto;
-    width: auto;
-    max-height: 3.125em;
-}
-
-nav ul li {
-    display: inline;
-    padding: .99em;
+li {
+    margin-left: -1em;
 }
 
 nav .active {
     text-decoration: underline;
+    background-color: #acd373;
+    background-image: none;
 }
 
-.hero {
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #acd373;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+#hamburger {
+    max-height: 2em;
+}
+
+@media (max-width: 768px)  {
+    #hero {
+        height: auto;
+    }
+}
+
+#hero {
     height: 31em;
     background-color:  #9abd67;
     position: relative;
+    height: 100%;
 }
 
 
-
-.hero h1 {
+#hero .row h1 {
     margin: 0px;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
@@ -58,9 +115,11 @@ nav .active {
     padding-top: 2.9em;
     color: #ffffff;
     font-size: 2.2em;
+    font-weight: 600;
 }
 
-.hero h2 {
+
+#hero h2 {
     color: #ffffff;
     font-family: "Droid Serif", serif;
     font-style: italic;
@@ -69,7 +128,7 @@ nav .active {
     font-size: 1.2em;
 }
 
-.hero #arrow {
+#hero #arrow {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -77,7 +136,7 @@ nav .active {
 }
 
 
-.hero #siluet {
+#siluet {
     height: auto;
     width: 100%;
     position: absolute;
@@ -87,20 +146,40 @@ nav .active {
 
 }
 
-.about .wrapper {
-    margin-top: 3em;
-    display: inline-block;
+@media (max-width: 768px) {
+    #hero {
+        height: 48em;
+    }
+    #hero .wrap {
+       padding-top: 10em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    #hero h2 {
+        font-size: 1.5em;
+    }
+    
+    #text {
+        width: 50%;
+    }
+    
+    #iphone {
+        max-height: 5em;
+        im
+    }
 }
 
-.about h1 {
+
+
+#about h1 {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     margin-left: 3em;
-    font-weight: 300;
+    font-weight: 400;
     
 }
 
-.about p {
+#about p {
     font-family: "Open Sans", sans-serif;
     display: inline-block;
     margin: .5em;
@@ -109,12 +188,8 @@ nav .active {
 }
 
 #text {
-    width: 55%;
-    float: left;
-    margin-left: 12.5em;
+    width: 50%;
     margin-top: 3em;
-   
-    
 }
 
 #human {
@@ -125,7 +200,7 @@ nav .active {
     float: left;
 }
 
-.about button {
+#about button {
     font-family: "Droid Serif", serif;
     color: #9abd67;
     font-size: 1em;
@@ -142,7 +217,7 @@ nav .active {
     display: inline-block;
     height: auto;
     width: auto;
-    max-height: 24em;
+    max-height: 20em;
     float: right;
     margin-right: 12em;
     margin-bottom: 6em;

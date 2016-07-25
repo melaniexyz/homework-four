@@ -2,42 +2,64 @@
     <html>
         <head>
         <meta charset="utf-8">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300|Droid+Serif:400italic,700italic' rel='stylesheet' type='text/css'>   <title>Sixteen Creative Agency</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     
+            <title>Sixteen Creative Agency</title>
             <link rel="stylesheet" href="css/style.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+             <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300|Droid+Serif:400italic,700italic' rel='stylesheet' type='text/css'> 
         </head>
         <body>
-            <header>
-            <nav>
-                <img src="images/sixteen-logo.png">    
-                <ul>
-                <li class="active">home</li>
-                <li>about</li>
-                <li>services</li>
-                <li>team</li>
-                <li>works</li>
-                <li>client say</li>
-                <li>blog</li>
-                <li>contact</li>
-                </ul>
-            </nav>
-            </header>
-            <section class="hero">
-            <h1>we are sixteen creative agency</h1>
-                <h2>Based in Jakarta, Indonesia</h2>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span><img id="hamburger" src="images/icon.png"></span>
+            </button>
+            <a class="navbar-brand navbar-left" href="#"><img src="images/sixteen-logo.png"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                   <li class="active"><a href="#">home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">team</a></li>
+                    <li><a href="#">works</a></li>
+                    <li><a href="#">client say</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+            
+            <section class="container-fluid" id="hero">
+                <div class="wrap">
+                <div class="row">             
+               <h1>we are sixteen creative agency</h1></div>
+                <div class="row"><h2>Based in Jakarta, Indonesia</h2>
+                </div>
                 <img id="arrow" src="images/arrow.png">
-                <img id="siluet" src=
-"images/siluet.png">            </section>
-            <section class="about">
-                <div class="wrapper">
-                <div id="text">
+                </div>
+                <img id="siluet" src= "images/siluet.png">  
+            </div>
+            </section>
+            <section class="container-fluid" id="about">
+                <div class="row">
+                <div class="col-xs-5" id="text">
                 <img id="human" src="images/human.png">
                 <h1>who we are</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quam in omnis voluptates, optio architecto doloremque eius, nihil, error nemo cum ad consequuntur numquam saepe quibusdam nam dolore sunt ali quam. Modi, ut error volptas iure, nemo est.</p>
                 <p>Tempora autern maiores laudiatnium excepturi quidem, quaerat consequuntur atque nam, voluptate molestiae in natus vel, sunt itaque ullam omnis, accusamus est hic. Ab praesentium dolor, iure ut aut quae distintio quibusdam quo at dolorem saepe architecto, culpa voluptate qui facere blanditiis ducimus consectetur non.</p>
                     <button>Learn More</button>
-                
                 </div>
-                <img id="iphone" src="images/iphone.png">
+                <div class="col-xs-4">
+                <img id="iphone" src="images/iphone.png" class="img-responsive">
+                </div>
                 </div>
             </section>
         </body>
